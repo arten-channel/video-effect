@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #222, #000);
+  overflow: hidden;
+}
+body.playing:after {
+  opacity: 0.75;
+}
+body.playing #wrap:before {
+  transform: translateY(50vh);
+  opacity: 0;
+}
+body.playing #wrap.spin {
+  -webkit-animation: spin 1s ease-out 1;
+          animation: spin 1s ease-out 1;
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(720deg);
+  }
+}
+body.playing #wrap .blade:first-of-type {
+  opacity: 0.5;
+}
+body:before, body:after {
+  content: "";
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #222, #000);
+  opacity: 0.75;
+  z-index: 1;
+}
+body:after {
+  background: url("../images/LeadingVelvetyEastrussiancoursinghounds-size_restricted.gif");
+  background-size: cover;
+  z-index: 0;
+  filter: blur(10px);
+  opacity: 0;
+}
+body #wrap {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+}
+body #wrap:before {
+  content: "click me";
+  font-family: Futura, sans-serif;
+  position: absolute;
+  bottom: -50px;
+  color: #ccc;
+  letter-spacing: 2px;
+  transition: 0.3s ease-in-out;
+}
+body #wrap .blade {
+  display: inline-block;
+  position: absolute;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 100px;
+  width: 100%;
+  height: 100%;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+}
+body #wrap .blade:first-of-type {
+  transition: opacity 0.4s ease-in-out;
+  background: url("../images/21f05a475f9072ec6eb5711affb31b34.gif") no-repeat;
+  background-size: 100px;
+  background-position: 85% 75%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  mix-blend-mode: brighten;
+  z-index: 9;
+  -webkit-clip-path: polygon(84% 0, 100% 0, 100% 100%, -13% 100%);
+          clip-path: polygon(84% 0, 100% 0, 100% 100%, -13% 100%);
+  opacity: 0;
+}
+body canvas {
+  opacity: 0;
+  z-index: 9;
+  cursor: pointer;
+}
