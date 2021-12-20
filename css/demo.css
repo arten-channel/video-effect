@@ -45,7 +45,7 @@ body:before, body:after {
   z-index: 1;
 }
 body:after {
-  background: url("../images/LeadingVelvetyEastrussiancoursinghounds-size_restricted.gif");
+  background: url("../images/video-effect-2.gif");
   background-size: cover;
   z-index: 0;
   filter: blur(10px);
@@ -86,7 +86,7 @@ body #wrap .blade {
 }
 body #wrap .blade:first-of-type {
   transition: opacity 0.4s ease-in-out;
-  background: url("../images/21f05a475f9072ec6eb5711affb31b34.gif") no-repeat;
+  background: url("../images/video-effect-1.gif") no-repeat;
   background-size: 100px;
   background-position: 85% 75%;
   -webkit-background-clip: text;
